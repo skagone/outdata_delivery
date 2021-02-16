@@ -1,6 +1,24 @@
-## Data Wrangling and Data Validation  - tiger team
+## Data Wrangling and Data Validation  -  tiger team
+
+We are gathered here to build easy to use automated tools to wrangle data in the cloud
+and provide tools for model output validation and evaluation.
+Those tools include functionality such as 
+- Sampling of pixel(s) to a table format
+- Zonal Statistics of a polygon (county, watershed, land cover, etc.)
  
-- concept: build easy to use automated tools to wrangle data in the cloud
+ 
+#### Team members
+
+| Name     |             |
+| ------   | ----------- |
+| Tony     |
+| Steffi   |
+| Logan    |
+| Olena    |
+
+
+#### Things on the list include:
+
 - share techniques
 - practice validating the ET model 
 -	develop widgets in python/panel
