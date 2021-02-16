@@ -15,6 +15,7 @@ Those tools include functionality such as
 | Steffi   |
 | Logan    |
 | Olena    |
+| ...      |
 
 
 #### Team GitHub repo
