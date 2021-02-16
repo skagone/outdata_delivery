@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Evapotranspiration's WIP documentation!
+Welcome to Science Tools WIP documentation!
 ==================================================
 
 .. toctree::
@@ -11,13 +11,9 @@ Welcome to Evapotranspiration's WIP documentation!
    :caption: Contents:
 
    FirstSteps.md
-   HowToSetUpDoc.md
-   Image_Viewers.md
    Manual_VegET_1pixel_app.md
-   # Run_VegET_model_North_America_extent.md
-   pixelviewer.md
-   # project_outline.md
-   # tony-stuff.md
+   Image_Viewers.md
+
 
 Indices and tables
 ==================
