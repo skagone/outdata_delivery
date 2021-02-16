@@ -1,10 +1,11 @@
 ## How to set up a sphinx based documentation site
 
-1. Create a docs directory
+1. Create a docs, source directories
 
-1. Create *.md files with content to be included in the documentation
+2. Create *.md files with content to be included in the documentation
 
-1. Create a 'Makefile.sphinx' file with following content:
+3. Create a 'Makefile.sphinx' file with following content:
+
 ```    
     # Minimal makefile for Sphinx documentation
 
@@ -27,7 +28,8 @@
       @$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 ```    
 
-1. Create a nginx set up file to display the documentation as a website:
+4. Create a nginx set up file to display the documentation as a website:
+
 ```
 Image=tbutzer/sphinx
 html:
@@ -41,5 +43,4 @@ webServer:
 
 git:
 	(cd /opt/et && make)
-
 ```
