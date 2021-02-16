@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>How to set up a sphinx based documentation site &mdash; ET PANGEO AWS Development 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Build Image viewers for visual evaluation" href="Image_Viewers.html" />
+    <link rel="prev" title="Data Wrangling and Data Validation - tiger team" href="FirstSteps.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ET PANGEO AWS Development
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="FirstSteps.html">Data Wrangling and Data Validation  -  tiger team</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="FirstSteps.html#team-members">Team members</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FirstSteps.html#team-github-repo">Team GitHub repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FirstSteps.html#things-on-the-list-include">Things on the list include:</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to set up a sphinx based documentation site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Image_Viewers.html">Build Image viewers for visual evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Manual_VegET_1pixel_app.html">Create an application to calculate the VegET model for only 1 pixel (manual calculation sheet)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pixelviewer.html">Create an application to calculate the VegET model for only 1 pixel (manual calculation sheet)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ET PANGEO AWS Development</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>How to set up a sphinx based documentation site</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/HowToSetUpDoc.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-set-up-a-sphinx-based-documentation-site">
+<h1>How to set up a sphinx based documentation site<a class="headerlink" href="#how-to-set-up-a-sphinx-based-documentation-site" title="Permalink to this headline">¶</a></h1>
+<ol class="simple">
+<li><p>Create a docs directory</p></li>
+<li><p>Create *.md files with content to be included in the documentation</p></li>
+<li><p>Create a ‘Makefile.sphinx’ file with following content:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    # Minimal makefile for Sphinx documentation
+
+    # You can set these variables from the command line, and also
+    # from the environment for the first two.
+    SPHINXOPTS    ?=
+    SPHINXBUILD   ?= sphinx-build
+    SOURCEDIR     = .
+    BUILDDIR      = _build
+
+    # Put it first so that &quot;make&quot; without argument is like &quot;make help&quot;.
+    help:
+      @$(SPHINXBUILD) -M help &quot;$(SOURCEDIR)&quot; &quot;$(BUILDDIR)&quot; $(SPHINXOPTS) $(O)
+
+    .PHONY: help Makefile
+
+    # Catch-all target: route all unknown targets to Sphinx using the new
+    # &quot;make mode&quot; option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
+    %: Makefile
+      @$(SPHINXBUILD) -M $@ &quot;$(SOURCEDIR)&quot; &quot;$(BUILDDIR)&quot; $(SPHINXOPTS) $(O)
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Create a nginx set up file to display the documentation as a website:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Image=tbutzer/sphinx
+html:
+	docker run\
+           -v `pwd`:/home \
+           ${Image} sphinx-build source build/html
+
+webServer:
+	docker run --name et-web -p 80:80 -v `pwd`/build/html:/usr/share/nginx/html:ro -d nginx
+
+git:
+	(cd /opt/et &amp;&amp; make)
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Image_Viewers.html" class="btn btn-neutral float-right" title="Build Image viewers for visual evaluation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="FirstSteps.html" class="btn btn-neutral float-left" title="Data Wrangling and Data Validation - tiger team" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Tony Butzer
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
