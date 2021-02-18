@@ -5,6 +5,8 @@ and provide tools for model output validation and evaluation.
 Those tools include functionality such as 
 - Sampling of pixel(s) to a table format
 - Zonal Statistics of a polygon (county, watershed, land cover, etc.)
+
+### Project Cherter Stuff to be filled out in meetings
  
  
 #### Team members
